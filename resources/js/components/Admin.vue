@@ -164,7 +164,7 @@ export default {
         async deleteProduct(product){
             Swal.fire({
                 title: 'Confirmación',
-                text: `¿Esta seguro de eliminar el producto`,
+                text: `¿Esta seguro de eliminar el producto?`,
                 confirmButtonColor: "#792141FF",
                 cancelButtonColor: "rgba(0,0,0,0.73)",
                 confirmButtonText: 'Aceptar',

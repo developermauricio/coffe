@@ -25,6 +25,7 @@ class CreateProductsTable extends Migration
             $table->foreign('product_category_id')->references('id_category')->on('categories');
             $table->integer('stock')->default(0);
             $table->string('product_slug');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

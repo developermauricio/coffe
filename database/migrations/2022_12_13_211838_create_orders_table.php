@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->unsignedInteger('product_id')->nullable();;
             $table->foreign('product_id')->references('id_product')->on('products');
             $table->double('total');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

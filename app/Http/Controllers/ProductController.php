@@ -197,7 +197,10 @@ class ProductController extends Controller
     {
         DB::beginTransaction();
         try {
-            $product = Product::find($productId);
+            $product = Product::findOrFail($productId);
+            foreach ($product->orders as $order) {
+                $order->delete();
+            }
             $product->delete();
             DB::commit();
             return response()->json([
