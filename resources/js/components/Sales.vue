@@ -11,11 +11,11 @@
                     <div class="card">
                         <div class="card-body">
                             <vue-good-table
-                                styleClass="vgt-table striped table-hover"
+                                styleClass="vgt-table striped table-hover table-responsive"
                                 :columns="columns"
                                 :line-numbers="true"
                                 :rows="sales"
-                                :fixed-header="true"
+                                :fixed-header="false"
                                 max-height="500px"
                                 :pagination-options="{
     enabled: true,
