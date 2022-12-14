@@ -264,7 +264,7 @@ export default {
                         this.$toast.success(`Producto creado exitosamente!`);
                         setTimeout(() => {
                             eventBus.$emit('updateListProducts')
-                        }, 500)
+                        }, 1000)
 
                     }).catch(e => {
                         this.$vs.loading.close()
